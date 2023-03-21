@@ -10,7 +10,6 @@ from permissions import permission_check
 class ManageMessages(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.pr_link = 
         self._rand_int = 1
 
     @commands.Cog.listener("on_message")
