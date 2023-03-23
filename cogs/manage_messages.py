@@ -24,7 +24,7 @@ class ManageMessages(commands.Cog):
             await message.channel.send("uh oh")
         elif "PR" == message.content:
             await message.channel.send(Messages.pr_link)
-        elif self.bot.user.mentioned_in(message):
+        elif f"<@!{self.bot.user.id}>" in message.content or f"<@{self.bot.user.id}>" in message.content:
             if random.randint(1, self._rand_int) == 1:
                 await message.channel.send(random.choice(Messages.Lotus_love))
             else:
